@@ -35,7 +35,7 @@ app.post('/sendEmail', function(req, res){
   mailgun.messages().send(data, function (error, body) {
     if(error) {
       console.log(error);
-      res.status(400).send('There was an error sending your email');
+      res.status(400).send(error);
     } else {
       res.status(200).send('Success!');
     }
