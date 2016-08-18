@@ -1,9 +1,10 @@
 angular.module('NerdForm', [])
 .controller('MainController', ["$scope", "$http", function($scope, $http){
-  $scope.showThanks = false;
+  var preventSubmit = false;
   $scope.submitFailed = false;
   $scope.submit = function() {
-    
+    if(preventSubmit) return;
+    preventSubmit = true;
     $http({
       method: 'POST',
       url: '/sendEmail',
@@ -13,12 +14,10 @@ angular.module('NerdForm', [])
         email: $scope.email
       }
     }).then(function successCallback(response) {
-
-      console.log('success!');
+      preventSubmit = false;
       $scope.$emit('animateThanks');
     }, function errorCallback(response) {
-
-      console.log(response);
+      preventSubmit = false;
       $scope.submitFailed = true;
       $scope.$emit('animateFail');
     });
