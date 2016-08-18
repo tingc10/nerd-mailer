@@ -1,0 +1,174 @@
+@import 'https://fonts.googleapis.com/css?family=Roboto';
+$error-color: #ff7043;
+$background-color: #f8f8f8;
+$green: #6cc551;
+
+h2 {
+  margin-top: 0;
+  color: #464646;
+}
+
+html, body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: $background-color;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0,0,0, 0.1);
+  padding: 60px 40px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#form {
+  width: 224px;
+}
+
+input {
+  appearance: none;
+}
+
+input[type=email], input[type=text] {
+  border: 1px solid #bcbcbc;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px 14px;
+  font-size: 18px;
+  color: #585858;
+  transition: 0.15s border ease-out;
+  outline: none;
+  &.ng-valid {
+    border-color: $green;
+  }
+  &:focus {
+    box-shadow: 0 0 5px rgba(14,190,255,0.5);
+  }
+  &.error-outline {
+    border-color: $error-color;
+  }
+}
+
+input[type=submit] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: $green;
+  &[disabled] {
+    cursor: default;
+    background-color: #adadad;
+  }
+}
+
+
+
+.error {
+  font-size: 12px;
+  opacity: 0;
+  color: $error-color;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  transition: 0.15s opacity ease-out;
+  text-align: left;
+}
+
+.show {
+  opacity: 1;
+}
+
+.thank-you-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: $green;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+  h2 {
+    color: white;
+  }
+}
+
+.show-thanks {
+  opacity: 1;
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hidden-message {
+  opacity: 0;
+}
+
+.return-link {
+  color: white;
+  text-decoration: none;
+  transition: all 0.15s;
+  &:hover {
+    color: #00ACCC;
+  }
+}
+
+#check-stroke {
+  stroke: white;
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 100% 200%;
+  stroke-dashoffset: 100%;
+}
+
+.check-container {
+  $containerSize: 100px;
+  width: $containerSize;
+  height: $containerSize;
+  border-radius: 50%;
+  margin-bottom: 24px;
+  
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 5px solid white;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0.5);
+}

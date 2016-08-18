@@ -1,0 +1,23 @@
+{
+  "name": "emailer",
+  "version": "1.0.0",
+  "description": "",
+  "engines": {
+    "node": "5.8.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "autoprefix": "postcss --local-plugins --use autoprefixer -o main.css css/*.css"
+  },
+  "author": "Ting Chen",
+  "license": "ISC",
+  "dependencies": {
+    "autoprefixer": "^6.4.0",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mailgun-js": "^0.7.12",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7"
+  }
+}

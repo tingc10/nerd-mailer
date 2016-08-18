@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<title>Simple Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./stylesheets/prefix-main.css">
+<body>
+  <div class="container" ng-app="NerdForm" ng-controller="MainController" form-container>
+    <h2>Simple Form</h2>
+    <form id="form" name="userInfo" novalidate ng-submit="submit()">
+      <div class="input-container">
+        <input type="text" ng-class="{'error-outline': userInfo.firstName.$invalid && userInfo.firstName.$touched}" ng-model="firstName" name="firstName" ng-required="true" placeholder="First Name">
+        <div class="error" ng-class="{show: userInfo.firstName.$invalid && userInfo.firstName.$touched}">
+          Please enter your first name
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="text" ng-class="{'error-outline': userInfo.lastName.$invalid && userInfo.lastName.$touched}" ng-model="lastName" name="lastName" ng-required="true" ng-minlength="1" placeholder="Last Name">
+        <div class="error" ng-class="{show: userInfo.lastName.$invalid && userInfo.lastName.$touched}">
+          Please enter your last name
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="email" ng-class="{'error-outline': userInfo.email.$invalid && userInfo.email.$touched, valid: userInfo.email.$valid}" name="email" ng-model="email" ng-required="true" placeholder="Email"/>
+        <div class="error" ng-class="{show: userInfo.email.$invalid && userInfo.email.$touched}">
+          Please enter a valid email
+        </div>
+      </div>
+      <input type="submit" ng-disabled="userInfo.$invalid" value="Submit" />
+      <div class="error" ng-class="{show: submitFailed}">
+        Of no! Something went wrong with your request, please try again.
+      </div>
+    </form>
+
+    <div class="thank-you-container" thank-you>
+      <div class="content-container">
+        <h2 class="hidden-message">Thank you for submitting the form!</h2>
+        <div class="hidden-message email-confirm">
+          A confirmation has been<br/>sent to your email
+        </div>
+        <div class="check-container">
+          <div class="circle">
+            <svg id="check" viewBox="-281 373 48 48">
+              <path id="check-stroke" d="M-273.2,398.2l10,9.9 l22.4-22.3"/>
+            </svg>
+          </div>
+            
+        </div>
+        
+        <a class="return-link hidden-message" href="https://www.nerdwallet.com">
+          Return to NerdWallet
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.5/angular.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+</html>
+

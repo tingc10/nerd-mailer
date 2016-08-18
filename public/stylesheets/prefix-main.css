@@ -1,0 +1,230 @@
+@import "https://fonts.googleapis.com/css?family=Roboto:300,400,500";
+/* line 6, ../sass/main.scss */
+h2 {
+  margin-top: 0;
+  color: #464646;
+}
+
+/* line 11, ../sass/main.scss */
+html, body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: #f8f8f8;
+  box-sizing: border-box;
+}
+
+/* line 23, ../sass/main.scss */
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: white;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 60px 40px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* line 37, ../sass/main.scss */
+#form {
+  width: 224px;
+}
+
+/* line 41, ../sass/main.scss */
+input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* line 45, ../sass/main.scss */
+input[type=email], input[type=text] {
+  border: 1px solid #bcbcbc;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px 14px;
+  font-size: 18px;
+  color: #585858;
+  -webkit-transition: 0.15s border ease-out;
+  transition: 0.15s border ease-out;
+  outline: none;
+}
+/* line 55, ../sass/main.scss */
+input[type=email].ng-valid, input[type=text].ng-valid {
+  border-color: #6cc551;
+}
+/* line 58, ../sass/main.scss */
+input[type=email]:focus, input[type=text]:focus {
+  box-shadow: 0 0 5px rgba(14, 190, 255, 0.5);
+}
+/* line 61, ../sass/main.scss */
+input[type=email].error-outline, input[type=text].error-outline {
+  border-color: #ff7043;
+}
+
+/* line 66, ../sass/main.scss */
+input[type=submit] {
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  background-color: #6cc551;
+}
+/* line 76, ../sass/main.scss */
+input[type=submit][disabled] {
+  cursor: default;
+  background-color: #adadad;
+}
+
+/* line 84, ../sass/main.scss */
+.error {
+  font-size: 12px;
+  opacity: 0;
+  color: #ff7043;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  -webkit-transition: 0.15s opacity ease-out;
+  transition: 0.15s opacity ease-out;
+  text-align: left;
+}
+
+/* line 94, ../sass/main.scss */
+.show {
+  opacity: 1;
+}
+
+/* line 98, ../sass/main.scss */
+.thank-you-container {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background-color: #6cc551;
+  opacity: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+/* line 113, ../sass/main.scss */
+.thank-you-container h2 {
+  color: white;
+  margin: 5px;
+}
+
+/* line 118, ../sass/main.scss */
+.show-thanks {
+  opacity: 1;
+  pointer-events: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+
+/* line 126, ../sass/main.scss */
+.content-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px;
+}
+
+/* line 134, ../sass/main.scss */
+.hidden-message {
+  opacity: 0;
+}
+
+/* line 138, ../sass/main.scss */
+.return-link {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.15s;
+  transition: all 0.15s;
+}
+/* line 142, ../sass/main.scss */
+.return-link:hover {
+  color: #00ACCC;
+}
+
+/* line 147, ../sass/main.scss */
+#check-stroke {
+  stroke: white;
+  fill: none;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-dasharray: 100% 200%;
+  stroke-dashoffset: 100%;
+}
+
+/* line 156, ../sass/main.scss */
+.check-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 24px;
+}
+
+/* line 165, ../sass/main.scss */
+.circle {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 5px solid white;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.email-confirm {
+  color: white;
+  margin-bottom: 30px;
+  font-size: 14px;
+  font-weight: 300;
+}
