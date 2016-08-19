@@ -145,6 +145,7 @@ input[type=submit][disabled] {
 .thank-you-container h2 {
   color: white;
   margin: 5px;
+  width: 100%;
 }
 
 /* line 118, ../sass/main.scss */
@@ -172,6 +173,7 @@ input[type=submit][disabled] {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px;
+  width: 100%;
 }
 
 /* line 134, ../sass/main.scss */
